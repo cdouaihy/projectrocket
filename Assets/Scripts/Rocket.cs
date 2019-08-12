@@ -70,13 +70,13 @@ public class Rocket : MonoBehaviour {
         if (Input.GetKey(KeyCode.A))
         {
 
-            transform.Rotate(Vector3.forward * rotationFrame);
+            transform.Rotate(-Vector3.forward * rotationFrame);
 
         }
         else if (Input.GetKey(KeyCode.D))
         {
 
-            transform.Rotate(-Vector3.forward * rotationFrame);
+            transform.Rotate(Vector3.forward * rotationFrame);
 
         }
         rigidBody.freezeRotation = false;
