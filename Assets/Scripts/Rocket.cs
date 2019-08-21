@@ -1,10 +1,12 @@
 ﻿using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Rocket : MonoBehaviour {
     Rigidbody rigidBody;
     AudioSource audioSource;
 
+    [SerializeField] Lives life;
     [SerializeField] float mainThrust = 100f;
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] AudioClip mainEngine;
@@ -18,6 +20,8 @@ public class Rocket : MonoBehaviour {
     [SerializeField] bool isCol = true;
     enum State {Alive, Dying, Transcending};
     State state = State.Alive;
+
+
 
     // Use this for initialization
     void Start () {
@@ -103,7 +107,15 @@ public class Rocket : MonoBehaviour {
                 audioSource.Stop();
                 audioSource.PlayOneShot(deathSound);
                 deathPart.Play();
-                Invoke("RestartFirstScene", 1f);
+                if (life.getLife() == 0)
+                {
+                    Invoke("RestartFirstScene", 1f);
+                }
+                else
+                {
+                    life.RemoveLife();
+                    Invoke("LoadSameScene", 1f);
+                }
                 break;
         }
     }
@@ -111,6 +123,11 @@ public class Rocket : MonoBehaviour {
     private void RestartFirstScene()
     {
         SceneManager.LoadScene(0);
+    }
+
+    private void LoadSameScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void LoadNextScene()
