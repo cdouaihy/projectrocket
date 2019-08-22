@@ -102,6 +102,10 @@ public class Rocket : MonoBehaviour {
                 successPart.Play();
                 Invoke("LoadNextScene", 1f);
                 break;
+            case "ExtraLife":
+                Destroy(collision.gameObject);
+                life.AddLife();
+                break;
             default:
                 state = State.Dying;
                 audioSource.Stop();

@@ -5323,7 +5323,7 @@ GameObject:
   - component: {fileID: 2020809736617239962}
   m_Layer: 0
   m_Name: AtomRocket
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5478,6 +5478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f582cc45372ea4ad2aac611c6e30adf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: {fileID: 0}
   mainThrust: 45
   rcsThrust: 60
   mainEngine: {fileID: 8300000, guid: 4c4217edc95644fe2b8ef4e3a35337fa, type: 3}

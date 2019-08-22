@@ -41,11 +41,11 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 0
-  m_Color: {r: 1, g: 0.51084447, b: 0, a: 1}
-  m_Intensity: 100
+  m_Color: {r: 1, g: 0.07227322, b: 0, a: 1}
+  m_Intensity: 150
   m_Range: 15
   m_SpotAngle: 16
-  m_InnerSpotAngle: 11
+  m_InnerSpotAngle: 6
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -180,9 +180,11 @@ GameObject:
   - component: {fileID: 4724203163668362225}
   - component: {fileID: 4724203162378714484}
   - component: {fileID: 4724203162378714483}
+  - component: {fileID: 648581060}
+  - component: {fileID: 648581058}
   m_Layer: 0
   m_Name: ExtraLife
-  m_TagString: Untagged
+  m_TagString: ExtraLife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 4724203163668525009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.15, y: 19.32, z: -0.32}
-  m_LocalScale: {x: 0.33722, y: 0.33722, z: 0.33722}
+  m_LocalScale: {x: 0.43009043, y: 0.43009043, z: 0.43009043}
   m_Children:
   - {fileID: 4724203163668362237}
   - {fileID: 4724203163668362239}
@@ -4931,6 +4933,34 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!65 &648581060
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724203163668525009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 6, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &648581058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724203163668525009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd06e6db7b65c4a0b8433fca8a6d4f38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xSpeed: 100
+  ySpeed: 100
+  zSpeed: 100
 --- !u!1 &4724203163668525011
 GameObject:
   m_ObjectHideFlags: 0
