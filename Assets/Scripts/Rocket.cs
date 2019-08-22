@@ -106,6 +106,10 @@ public class Rocket : MonoBehaviour {
                 Destroy(collision.gameObject);
                 life.AddLife();
                 break;
+            case "SmallB":
+                Destroy(collision.gameObject);
+                transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                break;
             default:
                 state = State.Dying;
                 audioSource.Stop();
