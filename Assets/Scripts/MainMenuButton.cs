@@ -14,4 +14,5 @@ public class MainMenuButton : MonoBehaviour {
     {
         Application.Quit();
     }
+
 }
