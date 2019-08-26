@@ -10,6 +10,11 @@ public class MainMenuButton : MonoBehaviour {
         SceneManager.LoadScene(1);
     }
 
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
+    }
+
     public void QuitGame()
     {
         Application.Quit();

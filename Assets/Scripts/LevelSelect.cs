@@ -7,6 +7,6 @@ public class LevelSelect : MonoBehaviour
 {
     public void OnClicked(GameObject button)
     {
-        SceneManager.LoadScene(button.name);
+        SceneManager.LoadScene(int.Parse(button.name));
     }
 }
