@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour
 {
+
+    AudioSource audioSource;
     bool isOn = false;
     bool isTurning = false;
     [SerializeField] GameObject door;
     [SerializeField] float limit;
     [SerializeField] int speed;
     [SerializeField] bool lessthan;
+
+    [SerializeField] AudioClip turned;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,7 +35,6 @@ public class Switch : MonoBehaviour
             }
             else
             {
-                Debug.Log(door.transform.localEulerAngles.z);
                 door.transform.Rotate(Vector3.forward * Time.deltaTime * speed);
             }
         }
@@ -42,6 +46,7 @@ public class Switch : MonoBehaviour
         {
             isOn = true;
             isTurning = true;
+            audioSource.PlayOneShot(turned);
             gameObject.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
         }
     }
