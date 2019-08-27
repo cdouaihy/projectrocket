@@ -864,7 +864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427540028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4471274, y: 0, z: 0}
+  m_LocalPosition: {x: -0.436, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 187914416}
@@ -1474,7 +1474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0a9b6a4321c4287824713ef974014b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 0}
+  door: {fileID: 187914415}
+  speed: -50
 --- !u!1001 &4300099006685961091
 PrefabInstance:
   m_ObjectHideFlags: 0
