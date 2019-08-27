@@ -9,6 +9,7 @@ TagManager:
   - ExtraLife
   - SmallB
   - Switch
+  - Switch2
   layers:
   - Default
   - TransparentFX

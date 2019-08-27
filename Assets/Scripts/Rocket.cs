@@ -8,6 +8,7 @@ public class Rocket : MonoBehaviour {
 
     [SerializeField] Lives life;
     [SerializeField] Switch swi;
+    [SerializeField] Switch swi2;
     [SerializeField] float mainThrust = 100f;
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] AudioClip mainEngine;
@@ -113,6 +114,9 @@ public class Rocket : MonoBehaviour {
                 break;
             case "Switch":
                 swi.turnOn();
+                break;
+            case "Switch2":
+                swi2.turnOn();
                 break;
             default:
                 state = State.Dying;

@@ -7,11 +7,12 @@ public class Switch : MonoBehaviour
     bool isOn = false;
     bool isTurning = false;
     [SerializeField] GameObject door;
+    [SerializeField] float limit;
     [SerializeField] int speed;
+    [SerializeField] bool lessthan;
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -19,12 +20,17 @@ public class Switch : MonoBehaviour
     {
         if (isTurning) {
 
-            if (door.transform.localEulerAngles.z  < 270)
+            if (lessthan && door.transform.localEulerAngles.z  < limit)
             {
-
                 isTurning = false;
             }
-            else{
+            else if (!lessthan && door.transform.localEulerAngles.z > limit)
+            {
+                isTurning = false;
+            }
+            else
+            {
+                Debug.Log(door.transform.localEulerAngles.z);
                 door.transform.Rotate(Vector3.forward * Time.deltaTime * speed);
             }
         }
