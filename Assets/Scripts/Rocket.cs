@@ -7,6 +7,7 @@ public class Rocket : MonoBehaviour {
     AudioSource audioSource;
 
     [SerializeField] Lives life;
+    [SerializeField] Switch swi;
     [SerializeField] float mainThrust = 100f;
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] AudioClip mainEngine;
@@ -109,6 +110,9 @@ public class Rocket : MonoBehaviour {
             case "SmallB":
                 Destroy(collision.gameObject);
                 transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                break;
+            case "Switch":
+                swi.turnOn();
                 break;
             default:
                 state = State.Dying;

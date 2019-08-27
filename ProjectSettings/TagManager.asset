@@ -8,6 +8,7 @@ TagManager:
   - Death
   - ExtraLife
   - SmallB
+  - Switch
   layers:
   - Default
   - TransparentFX
