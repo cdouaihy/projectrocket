@@ -126,6 +126,7 @@ public class Rocket : MonoBehaviour {
                 if (life.getLife() == 0)
                 {
                     Invoke("RestartFirstScene", 1f);
+
                 }
                 else
                 {
@@ -139,6 +140,7 @@ public class Rocket : MonoBehaviour {
     private void RestartFirstScene()
     {
         SceneManager.LoadScene(0);
+        life.ResetLife();
     }
 
     private void LoadSameScene()

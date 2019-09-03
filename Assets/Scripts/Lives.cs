@@ -28,6 +28,11 @@ public class Lives : MonoBehaviour
         lives = lives + 1;
     }
 
+    public void ResetLife()
+    {
+        lives = 3;
+    }
+
     public void RemoveLife()
     {
         lives = lives - 1;
