@@ -54,6 +54,9 @@ EditorBuildSettings:
     path: Assets/Levels/level 15.unity
     guid: f98d00566790e43dda466d47c1a1f8b2
   - enabled: 1
+    path: Assets/Levels/level 16.unity
+    guid: 8e25c0fce1d1141d5a822a9bdca6d974
+  - enabled: 1
     path: Assets/Levels/Start Screen/MainMenu 1.unity
     guid: e362822f8d19e4191b5dc66c8cda9e32
   m_configObjects: {}
