@@ -33,7 +33,11 @@ public class Rocket : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (state == State.Alive)
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Invoke("RestartFirstScene", 0.5f);
+        }
+            if (state == State.Alive)
         {
             Thrust();
             rotate();
@@ -140,7 +144,10 @@ public class Rocket : MonoBehaviour {
     private void RestartFirstScene()
     {
         SceneManager.LoadScene(0);
-        life.ResetLife();
+        if (life)
+        {
+            life.ResetLife();
+        }
     }
 
     private void LoadSameScene()
