@@ -1,4 +1,4 @@
-#Project Rocket!
+Project Rocket!
 
 This is a Unity project with scripts written in C#.
 
