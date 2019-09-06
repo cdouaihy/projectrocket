@@ -1,3 +1,5 @@
+#Project Rocket!
+
 This is a Unity project with scripts written in C#.
 
 Assets were either made from Unity meshes or imported from the Unity Asset Store.
